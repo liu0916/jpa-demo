@@ -7,7 +7,6 @@ import com.liu.jpa.User;
 import com.liu.jpa.UserRepository;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.jpa.impl.JPAQueryFactory;
-import com.sun.corba.se.impl.protocol.RequestCanceledException;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
