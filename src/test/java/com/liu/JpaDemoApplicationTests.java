@@ -56,7 +56,6 @@ public  class JpaDemoApplicationTests {
         Example<User> example = Example.of(user);
         log.info("结果为 ->"+userRepository.findAll(example).toString());
 
-
         String name = "结";
         //模糊查询
         log.info("结果为 ->"+userRepository.findByNameContaining(name).toString());
@@ -104,14 +103,14 @@ public  class JpaDemoApplicationTests {
     @Test
     public void deleteTest() {
         String id = "";
-        val user = userRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("invalid subbu :" + id));
+        val user = userRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("invalid id :" + id));
         userRepository.delete(user);
     }
 
     @Test
     public void editTest() {
         String id = "";
-        val user = userRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("invalid subbu :" + id));
+        val user = userRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("invalid id :" + id));
         user.setPassword("123456");
         userRepository.save(user);
     }
